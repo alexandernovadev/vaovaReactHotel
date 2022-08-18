@@ -1,4 +1,4 @@
-export const fileUpload = async (file: any) => {
+export const fileUpload = async (file) => {
   if (!file) throw new Error("No tenemos ningúna archivo a subir");
 
   // ToDo: Set ID on .env file
