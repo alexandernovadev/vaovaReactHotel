@@ -3,14 +3,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { SidebarDrawer } from "../components/SidebarDrawer";
 import { DrawerHeader } from "../utils/configDrawer";
 
-// interface Props {
-//   children: ReactJSXElement | ReactJSXElement[];
-//   title: string;
-// }
-
 const HotelLayout = ({ children, title }) => {
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }} className="animate__animated animate__fadeIn">
       <CssBaseline />
       <SidebarDrawer title={title} />
 
@@ -26,7 +21,7 @@ const HotelLayout = ({ children, title }) => {
         <DrawerHeader />
         <Box
           sx={{
-            mt:4,
+            mt: 4,
             width: {
               xm: "100%",
               sm: "100%",

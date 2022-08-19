@@ -25,6 +25,7 @@ import { useNavigate } from "react-router-dom";
 import { FlagTranslate } from "../../../UI/FlagTranslate";
 import PropTypes from "prop-types";
 
+import logo from "../../../assets/logo-vaova-white-1.png";
 const optionsMenu = [
   { title: "Crear Hotel", icon: <AddCircleIcon />, to: "/create" },
   { title: "Mis hoteles", icon: <BedroomParentIcon />, to: "/my-hotels" },
@@ -71,6 +72,16 @@ export const SidebarDrawer = ({ title }) => {
 
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
+          <img
+            src={logo}
+            style={{
+              background: "black",
+              width: "70%",
+              borderRadius: 12,
+              padding: 4,
+            }}
+            alt="Logo Vaova"
+          />
           <IconButton onClick={() => setOpen(false)}>
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />

@@ -1,5 +1,6 @@
 {
   "COMMON": {
+    "LOADING": "Loading...",
     "SEND": "Send",
     "RECEIVE": "Receive",
     "TRANSACTION": "Transaction",

@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { LoadingViews } from "../../../UI/LoadingViews";
 import { DetailHotel } from "../components/DetailHotel";
 import { useGetHotelById } from "../hooks/useGetHotelById";
 import HotelLayout from "../layout/HotelLayout";
@@ -22,7 +23,7 @@ export const ShowHotel = () => {
 
   return (
     <HotelLayout title="Show Hotel">
-      <>{isLoad ? "cargando" : <DetailHotel hotel={hotel} id={id} />}</>
+      <>{isLoad ?  <LoadingViews /> : <DetailHotel hotel={hotel} id={id} />}</>
     </HotelLayout>
   );
 };

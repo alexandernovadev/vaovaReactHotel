@@ -10,6 +10,7 @@ import { FlagTranslate } from "../../../UI/FlagTranslate";
 export const AuthLayout = ({ children, title = "" }) => {
   return (
     <Grid
+      className="animate__animated animate__fadeIn"
       container
       spacing={0}
       direction="column"

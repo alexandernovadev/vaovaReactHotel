@@ -1,6 +1,7 @@
 import { border } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { LoadingViews } from "../../../UI/LoadingViews";
 import { MyHotelCard } from "../components/MyHotelCard";
 import { useGetMyHotels } from "../hooks/useGetMyHotels";
 import HotelLayout from "../layout/HotelLayout";
@@ -18,11 +19,14 @@ export const MyHotels = () => {
 
   return (
     <HotelLayout title="My Hotels">
-      {/* {isLoadingData ? 'Cargando' : 'datos Listo'} */}
-      <>
-        {!isLoadingData &&
-          hotels.map((hotel) => <MyHotelCard key={hotel.id} {...hotel} />)}
-      </>
+      {isLoadingData ? (
+        <LoadingViews />
+      ) : (
+        <>
+          {!isLoadingData &&
+            hotels.map((hotel) => <MyHotelCard key={hotel.id} {...hotel} />)}
+        </>
+      )}
     </HotelLayout>
   );
 };

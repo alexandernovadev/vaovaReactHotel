@@ -4,6 +4,7 @@ import { useGetHotelById } from "../hooks/useGetHotelById";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { FormHotel } from "../components/FormHotel";
+import { LoadingViews } from "../../../UI/LoadingViews";
 
 export const EditHotel = () => {
   const { active } = useSelector((state) => state.hotel);
@@ -22,7 +23,13 @@ export const EditHotel = () => {
 
   return (
     <HotelLayout title="Editar Hotel">
-      <>{isLoad ? "cargando" : <FormHotel initialValues={active} id={id} />}</>
+      <>
+        {isLoad ? (
+          <LoadingViews />
+        ) : (
+          <FormHotel initialValues={active} id={id} />
+        )}
+      </>
     </HotelLayout>
   );
 };

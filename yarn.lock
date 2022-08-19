@@ -10,7 +10,7 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.18.6":
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.18.6":
   version "7.18.6"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
   integrity sha1-OyXTjIlgC6otzCGe36iKdOssQno=
@@ -1933,10 +1933,38 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@testing-library/dom@^8.5.0":
+  version "8.17.1"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@testing-library/dom/-/dom-8.17.1.tgz#2d7af4ff6dad8d837630fecd08835aee08320ad7"
+  integrity sha1-LXr0/22tjYN2MP7NCINa7ggyCtc=
+  dependencies:
+    "@babel/code-frame" "^7.10.4"
+    "@babel/runtime" "^7.12.5"
+    "@types/aria-query" "^4.2.0"
+    aria-query "^5.0.0"
+    chalk "^4.1.0"
+    dom-accessibility-api "^0.5.9"
+    lz-string "^1.4.4"
+    pretty-format "^27.0.2"
+
+"@testing-library/react@^13.3.0":
+  version "13.3.0"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@testing-library/react/-/react-13.3.0.tgz#bf298bfbc5589326bbcc8052b211f3bb097a97c5"
+  integrity sha1-vymL+8VYkya7zIBSshHzuwl6l8U=
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    "@testing-library/dom" "^8.5.0"
+    "@types/react-dom" "^18.0.0"
+
 "@tootallnate/once@2":
   version "2.0.0"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
   integrity sha1-9UShSNOrNYAcH2M6dEH9h8LkhL8=
+
+"@types/aria-query@^4.2.0":
+  version "4.2.2"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@types/aria-query/-/aria-query-4.2.2.tgz#ed4e0ad92306a704f9fb132a0cfcf77486dbe2bc"
+  integrity sha1-7U4K2SMGpwT5+xMqDPz3dIbb4rw=
 
 "@types/babel__core@^7.1.14":
   version "7.1.19"
@@ -2049,7 +2077,7 @@
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha1-XxnSuFqY6VWANvajysyIGUIPBc8=
 
-"@types/react-dom@^18.0.6":
+"@types/react-dom@^18.0.0", "@types/react-dom@^18.0.6":
   version "18.0.6"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@types/react-dom/-/react-dom-18.0.6.tgz#36652900024842b74607a17786b6662dd1e103a1"
   integrity sha1-NmUpAAJIQrdGB6F3hrZmLdHhA6E=
@@ -2204,6 +2232,11 @@ argparse@^1.0.7:
   integrity sha1-vNZ5HqWuCXJeF+WtmIE0zUCz2RE=
   dependencies:
     sprintf-js "~1.0.2"
+
+aria-query@^5.0.0:
+  version "5.0.0"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/aria-query/-/aria-query-5.0.0.tgz#210c21aaf469613ee8c9a62c7f86525e058db52c"
+  integrity sha1-IQwhqvRpYT7oyaYsf4ZSXgWNtSw=
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -2394,7 +2427,7 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@^4.0.0:
+chalk@^4.0.0, chalk@^4.1.0:
   version "4.1.2"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha1-qsTit3NKdAhnrrFr8CqtVWoeegE=
@@ -2602,6 +2635,11 @@ diff-sequences@^28.1.1:
   version "28.1.1"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/diff-sequences/-/diff-sequences-28.1.1.tgz#9989dc731266dc2903457a70e996f3a041913ac6"
   integrity sha1-mYnccxJm3CkDRXpw6ZbzoEGROsY=
+
+dom-accessibility-api@^0.5.9:
+  version "0.5.14"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/dom-accessibility-api/-/dom-accessibility-api-0.5.14.tgz#56082f71b1dc7aac69d83c4285eef39c15d93f56"
+  integrity sha1-VggvcbHceqxp2DxChe7znBXZP1Y=
 
 dom-helpers@^5.0.1:
   version "5.2.1"
@@ -3784,6 +3822,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lz-string@^1.4.4:
+  version "1.4.4"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/lz-string/-/lz-string-1.4.4.tgz#c0d8eaf36059f705796e1e344811cf4c498d3a26"
+  integrity sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY=
+
 magic-string@^0.26.2:
   version "0.26.2"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/magic-string/-/magic-string-0.26.2.tgz#5331700e4158cd6befda738bb6b0c7b93c0d4432"
@@ -4056,6 +4099,15 @@ prelude-ls@~1.1.2:
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
+pretty-format@^27.0.2:
+  version "27.5.1"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/pretty-format/-/pretty-format-27.5.1.tgz#2181879fdea51a7a5851fb39d920faa63f01d88e"
+  integrity sha1-IYGHn96lGnpYUfs52SD6pj8B2I4=
+  dependencies:
+    ansi-regex "^5.0.1"
+    ansi-styles "^5.0.0"
+    react-is "^17.0.1"
+
 pretty-format@^28.1.3:
   version "28.1.3"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/pretty-format/-/pretty-format-28.1.3.tgz#c9fba8cedf99ce50963a11b27d982a9ae90970d5"
@@ -4166,6 +4218,11 @@ react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
+
+react-is@^17.0.1:
+  version "17.0.2"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
+  integrity sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=
 
 react-is@^18.0.0, react-is@^18.2.0:
   version "18.2.0"

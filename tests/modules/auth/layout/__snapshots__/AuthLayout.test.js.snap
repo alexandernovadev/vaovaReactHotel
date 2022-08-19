@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in AuthLayout should to mathc with snapshot 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-zqh5bb-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 box-shadow animate__animated animate__fadeIn animate__faster css-8ez7fo-MuiGrid-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-1jcm1rz-MuiTypography-root"
+      >
+        Testing
+      </h5>
+      Im a children :D
+      <button
+        class="css-crr5sf"
+      >
+        en
+      </button>
+      <b>
+        |
+      </b>
+      <button
+        class="css-crr5sf"
+        style="font-weight: bold;"
+      >
+        es
+      </button>
+    </div>
+  </div>
+</div>
+`;
