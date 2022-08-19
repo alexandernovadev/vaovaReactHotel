@@ -133,7 +133,9 @@ export const FormHotel = ({ initialValues, id = null }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} aria-label="submit-form">
+      <form 
+      className="animate__animated animate__fadeInLeft animate__faster"
+      onSubmit={handleSubmit} aria-label="submit-form">
         <Grid container>
           <Grid
             item

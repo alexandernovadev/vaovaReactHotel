@@ -23,7 +23,7 @@ export const MyHotelCard = ({
   const { t } = useTranslation();
 
   return (
-    <CardMyHotel>
+    <CardMyHotel className="animate__animated animate__fadeInLeft animate__faster">
       <section className="img">
         <img src={images[0]} alt="" />
       </section>

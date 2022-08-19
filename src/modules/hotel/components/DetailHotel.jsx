@@ -9,7 +9,7 @@ import Modal from "@mui/material/Modal";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useDeleteHotel } from "../hooks/useDeleteHotel";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import { DetailSection, ModalBox } from "../styles/components/DetailHotelStyle";
 
 export const DetailHotel = ({ hotel, id }) => {
@@ -29,11 +29,11 @@ export const DetailHotel = ({ hotel, id }) => {
   };
 
   const handleGoEdit = () => {
-    navigate("/edit/"+id);
-  }
+    navigate("/edit/" + id);
+  };
 
   return (
-    <DetailSection>
+    <DetailSection className="animate__animated animate__fadeInLeft animate__faster">
       <Link className="btn-back" to="/my-hotels">
         <ArrowBackIcon />
       </Link>
@@ -62,19 +62,19 @@ export const DetailHotel = ({ hotel, id }) => {
         <section>
           <img src={hotel.logo} alt="" />
           <div>
-
-          <span>
-            <b>{t("HOTEL.TWO_TWIN_BEDROOM")}</b> : {hotel.two_twin_bedroom || 0}
-          </span>{" "}
-          <br />
-          <span>
-            <b>{t("HOTEL.SIMPLE_BEDROOM")}</b> : {hotel.single_room || 0}
-          </span>
-          <br />
-          <span>
-            <b>{t("HOTEL.ONE_QUEEN_BEDROOM")}</b> :{" "}
-            {hotel.one_queen_bedroom || 0}
-          </span>
+            <span>
+              <b>{t("HOTEL.TWO_TWIN_BEDROOM")}</b> :{" "}
+              {hotel.two_twin_bedroom || 0}
+            </span>{" "}
+            <br />
+            <span>
+              <b>{t("HOTEL.SIMPLE_BEDROOM")}</b> : {hotel.single_room || 0}
+            </span>
+            <br />
+            <span>
+              <b>{t("HOTEL.ONE_QUEEN_BEDROOM")}</b> :{" "}
+              {hotel.one_queen_bedroom || 0}
+            </span>
           </div>
         </section>
 
@@ -82,7 +82,9 @@ export const DetailHotel = ({ hotel, id }) => {
           <button className="buttons--remove" onClick={() => setOpen(true)}>
             Eliminar
           </button>
-          <button className="buttons--edit" onClick={handleGoEdit}>Edit</button>
+          <button className="buttons--edit" onClick={handleGoEdit}>
+            Edit
+          </button>
           <h1>{hotel.name}</h1>
           <p>{hotel.description}</p>
         </section>
@@ -117,4 +119,4 @@ export const DetailHotel = ({ hotel, id }) => {
 DetailHotel.propTypes = {
   hotel: PropTypes.object.isRequired,
   id: PropTypes.string.isRequired,
-}
+};

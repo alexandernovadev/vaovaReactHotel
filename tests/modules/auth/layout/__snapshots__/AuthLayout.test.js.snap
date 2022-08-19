@@ -3,7 +3,7 @@
 exports[`Test in AuthLayout should to mathc with snapshot 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-zqh5bb-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column animate__animated animate__fadeIn css-zqh5bb-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 box-shadow animate__animated animate__fadeIn animate__faster css-8ez7fo-MuiGrid-root"
