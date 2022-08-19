@@ -58,6 +58,7 @@
     "SAVE_HOTEL": "Guardar Hotel",
     "EDIT_HOTEL": "Editar Hotel",
     "NAME_HOTEL": "Nombre del Hotel",
+    "NAME_ERROR": "Este campo debe tener al menos 8 caracteres",
     "PLACEHOLDER_DESC":"Este hotel es grandioso",
     "COUNTRY": "País",
     "CITY": "Ciudad",
@@ -66,6 +67,7 @@
     "TYPE_HOTEL": "Tipo de Hotel",
     "SCORE": "Puntuación",
     "DESCRIPTION": "Descripción",
+    "DESCRIPTION_ERROR": "El campo debe tener minimo 300 caracteres",
     "ROOM_AVAILABLE":"Habitaciones disponibles",
     "IMAGE_GALLERY": "Galería de Imágenes",
     "MY_HOTELS": "Mis Hoteles",
@@ -74,6 +76,8 @@
     "SIMPLE_BEDROOM":"Habitación simple",
     "ONE_QUEEN_BEDROOM":"Habitación Queen",
     "NUMBER_VALIDATION":"Debe ser un número valido",
-    "NUMBER_ROOMS_MAX":"El número de habitaciones no puede ser mayor a 99999"
+    "NUMBER_ROOMS_MAX":"El número de habitaciones no puede ser mayor a 99999",
+    "LOGO_ERROR":"El logo del hotel es obligario",
+    "IMAGES_ERROR":"Debes subir al menos dos imagenes"
   }
 }

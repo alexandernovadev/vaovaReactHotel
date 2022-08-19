@@ -6,9 +6,8 @@ import FlagCircleIcon from "@mui/icons-material/FlagCircle";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import { voavaTheme } from "../../../theme";
 
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Modal from "@mui/material/Modal";
-import Box from "@mui/material/Box";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useDeleteHotel } from "../hooks/useDeleteHotel";
 
@@ -18,6 +17,14 @@ const red = voavaTheme.palette.error.main;
 const DetailSection = styled.div`
   padding-bottom: 64px;
 
+  .titlegalleery {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    h2 {
+      padding-left: 8px;
+      border-left: 5px solid ${mainColor};
+    }
+  }
   .btn-back {
     color: black;
   }
@@ -112,9 +119,9 @@ const ModalBox = styled.div`
     background: none;
     padding: 8px;
     border-radius: 12px;
-    transition: .2s;
+    transition: 0.2s;
 
-    &:hover{
+    &:hover {
       transform: scale(1.02);
     }
   }
@@ -127,20 +134,23 @@ const ModalBox = styled.div`
 `;
 
 export const DetailHotel = ({ hotel, id }) => {
-  
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const { deleteHotel } = useDeleteHotel();
   const navigate = useNavigate();
 
-  const handleDelele = async()=> {
+  const handleDelele = async () => {
+    // ToDO Delete image from cloudinary
     try {
-      await deleteHotel(id)
-      
+      await deleteHotel(id);
       navigate("/my-hotels");
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const handleGoEdit = () => {
+    navigate("/edit/"+id);
   }
 
   return (
@@ -156,10 +166,12 @@ export const DetailHotel = ({ hotel, id }) => {
         aria-describedby="modal-remove-hotel"
       >
         <ModalBox className="animate__animated animate__pulse animate__faster">
-          <div >
+          <div>
             <h2 id="modal-title">¿ Esta seguro de Eliminar ?</h2>
             <p id="modal-description">{hotel.name}</p>
-            <button className="buttons--remove" onClick={handleDelele}>Eliminar</button>
+            <button className="buttons--remove" onClick={handleDelele}>
+              Eliminar
+            </button>
             <button className="buttons--cancel" onClick={() => setOpen(false)}>
               Cancerlar
             </button>
@@ -188,7 +200,7 @@ export const DetailHotel = ({ hotel, id }) => {
           <button className="buttons--remove" onClick={() => setOpen(true)}>
             Eliminar
           </button>
-          <button className="buttons--edit">Edit</button>
+          <button className="buttons--edit" onClick={handleGoEdit}>Edit</button>
           <h1>{hotel.name}</h1>
           <p>{hotel.description}</p>
         </section>
@@ -208,6 +220,9 @@ export const DetailHotel = ({ hotel, id }) => {
         </div>
       </div>
 
+      <div className="titlegalleery">
+        <h2>Galeria de Fotos</h2>
+      </div>
       <div className="img-gallery">
         {hotel.images.map((image) => (
           <img key={image} src={image} alt="" />

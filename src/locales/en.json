@@ -58,6 +58,7 @@
     "SAVE_HOTEL": "Save Hotel",
     "EDIT_HOTEL":"Edit Hotel",
     "NAME_HOTEL": "Name Hotel",
+    "NAME_ERROR": "The name should be at least 8 characters",
     "PLACEHOLDER_DESC":"This hotel is amazing",
     "COUNTRY": "Country",
     "CITY": "City",
@@ -66,6 +67,7 @@
     "TYPE_HOTEL": "Type Hotel",
     "SCORE": "Score",
     "DESCRIPTION": "Description",
+    "DESCRIPTION_ERROR": "This should be at leat 300 characters",
     "ROOM_AVAILABLE":"Available rooms",
     "IMAGE_GALLERY": "Image Gallery",
     "MY_HOTELS": "My Hotels",
@@ -74,6 +76,8 @@
     "SIMPLE_BEDROOM":"Simple bedroom",
     "ONE_QUEEN_BEDROOM":"One queen bedroom",
     "NUMBER_VALIDATION":"Only valid numbers are allowed",
-    "NUMBER_ROOMS_MAX":"The number of rooms should be less than 99999"
+    "NUMBER_ROOMS_MAX":"The number of rooms should be less than 99999",
+    "LOGO_ERROR":"The logo is required",
+    "IMAGES_ERROR":"Should be at least two image"
   }
 }

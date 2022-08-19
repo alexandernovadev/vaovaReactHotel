@@ -12,9 +12,9 @@ const initialValues = {
   type_hotel: "",
   score: 2,
   roomtypes: {
-    two_twin_bedroom: { state: true, value: 0 },
-    single_room: { state: true, value: 0 },
-    one_queen_bedroom: { state: true, value: 0 },
+    two_twin_bedroom: { state: false, value: 0 },
+    single_room: { state: false, value: 0 },
+    one_queen_bedroom: { state: false, value: 0 },
   },
   images: [],
 };

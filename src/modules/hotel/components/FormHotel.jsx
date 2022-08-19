@@ -26,6 +26,10 @@ import { useFormik } from "formik";
 import { useEditHotel } from "../hooks/useEditHotel";
 
 import * as yup from "yup";
+import { voavaTheme } from "../../../theme";
+import { useNavigate } from "react-router-dom";
+
+const red = voavaTheme.palette.error.main;
 
 export const FormHotel = ({ initialValues, id = null }) => {
   const { t } = useTranslation();
@@ -33,22 +37,25 @@ export const FormHotel = ({ initialValues, id = null }) => {
   const { editHotel } = useEditHotel();
   const { saveHotel } = useSaveHotel();
   const { uploadImages } = useUploadClodninary();
+  const navigate = useNavigate();
 
+  // ToDo Refactor this with a Hook ValidationForm maybe
   const validationSchema = yup.object({
     name: yup
       .string()
-      .min(8, t("AUTH.PASSWORD_ERROR"))
+      .min(8, t("HOTEL.NAME_ERROR"))
       .required(t("COMMON.FIELD_ERROR")),
 
     description: yup
       .string()
-      .min(8, t("AUTH.PASSWORD_ERROR"))
+      .min(300, t("HOTEL.DESCRIPTION_ERROR"))
       .required(t("COMMON.FIELD_ERROR")),
-
     country: yup.string().required(t("COMMON.FIELD_ERROR")),
+    logo: yup.string().required(t("HOTEL.LOGO_ERROR")),
     department: yup.string().required(t("COMMON.FIELD_ERROR")),
     municipality: yup.string().required(t("COMMON.FIELD_ERROR")),
     type_hotel: yup.string().required(t("COMMON.FIELD_ERROR")),
+    images: yup.array().required().min(2, t("HOTEL.IMAGES_ERROR")),
     roomtypes: yup.object({
       two_twin_bedroom: yup.object({
         state: yup.boolean(),
@@ -97,12 +104,14 @@ export const FormHotel = ({ initialValues, id = null }) => {
   } = useFormik({
     initialValues,
     validationSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       if (id) {
-        editHotel(id, values);
+        await editHotel(id, values);
       } else {
-        saveHotel(values);
+        await saveHotel(values);
       }
+
+      navigate("/my-hotels");
     },
   });
 
@@ -118,6 +127,8 @@ export const FormHotel = ({ initialValues, id = null }) => {
     const image = await uploadImages(target.files);
     setValues({ ...values, images: [...values.images, image].flat() });
   };
+
+  // ToDO Delete image from cloudinary and the list ?
 
   return (
     <>
@@ -157,6 +168,9 @@ export const FormHotel = ({ initialValues, id = null }) => {
                 type="file"
               />
             </Button>
+            {errors.logo && values.logo.length == 0 && (
+              <span style={{ color: red }}>{errors.logo}</span>
+            )}
           </Grid>
 
           <Grid item xs={12} sm={8} sx={{ p: 2 }}>
@@ -459,6 +473,9 @@ export const FormHotel = ({ initialValues, id = null }) => {
               />
             </Button>
           </Grid>
+          {errors.images && values.images.length < 2 && (
+            <span style={{ color: red }}>{errors.images}</span>
+          )}
 
           {values.images.map((image) => (
             <Grid item xs={6} sm={4} sx={{ p: 1 }} key={image}>
