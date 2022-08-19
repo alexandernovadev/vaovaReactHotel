@@ -150,7 +150,7 @@ export const MyHotelCard = ({
         </div>
 
         <div className="details--btns">
-          <Link className="btn-show" to={`/edit/${id}`}>
+          <Link className="btn-show" to={`/show/${id}`}>
             Ver Mas
           </Link>
           <Link className="btn-edit" to={`/edit/${id}`}>

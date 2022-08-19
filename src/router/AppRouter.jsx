@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,Navigate } from "react-router-dom";
 import { useCheckAuth } from "../hooks/useCheckAuth";
 import { AuthRoutes } from "../modules/auth/routes/AuthRoutes";
 import { HotelRoutes } from "../modules/hotel/routes/HotelRoutes";
@@ -22,7 +22,7 @@ export const AppRouter = () => {
       {/* <Route path="/auth/*" element={<AuthRoutes />} /> */}
 
       {/* <Route path="/home" element={<Home />} /> */}
-      {/* <Route path="*" element={<Navigate to="/auth/login" replace />} /> */}
+      <Route path="*" element={<Navigate to="/auth/login" />} />
     </Routes>
   );
 };
