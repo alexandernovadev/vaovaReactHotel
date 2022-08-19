@@ -3,9 +3,11 @@
 See [DEMO](https://cli.vuejs.org/config/).
 
 
-### TECHS
+### Techs
 
 * React 18
+* Redux
+* Redux Toolkit
 * Vite 
 * Firebase
 * React Router Dom
