@@ -1,6 +1,6 @@
 # Hotel App Firebae
 
-See [DEMO](https://cli.vuejs.org/config/).
+See [DEMO](https://hotelsvaova-app.netlify.app/).
 
 
 ### Techs
