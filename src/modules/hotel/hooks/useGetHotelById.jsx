@@ -36,8 +36,6 @@ export const useGetHotelById = () => {
     delete HotelFormat.one_queen_bedroom;
     delete HotelFormat.single_room;
 
-    console.log(HotelFormat);
-
     dispatch(setHotelActive(HotelFormat));
   };
 
