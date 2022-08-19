@@ -1,10 +1,11 @@
-import { border } from "@mui/system";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { LoadingViews } from "../../../UI/LoadingViews";
 import { MyHotelCard } from "../components/MyHotelCard";
 import { useGetMyHotels } from "../hooks/useGetMyHotels";
 import HotelLayout from "../layout/HotelLayout";
+import { NoDataHotels } from "../components/NoDataHotels";
+
 
 export const MyHotels = () => {
   const { getMyHotels } = useGetMyHotels();
@@ -23,6 +24,8 @@ export const MyHotels = () => {
         <LoadingViews />
       ) : (
         <>
+          {hotels.length === 0 && <NoDataHotels />}
+
           {!isLoadingData &&
             hotels.map((hotel) => <MyHotelCard key={hotel.id} {...hotel} />)}
         </>

@@ -11,7 +11,7 @@ export const LoadingPages = () => {
     <LoadingPageContent className="animate__animated animate__fadeIn">
       <div className="animate__animated animate__bounce animate__infinite	">
         <img src={logo} alt="Logo vaova" />
-        <h1>{t("COMMON.LOADING")}</h1>
+        <h3>{t("COMMON.LOADING")}</h3>
       </div>
     </LoadingPageContent>
   );

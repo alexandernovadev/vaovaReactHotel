@@ -56,6 +56,8 @@
     "POPUP_CLOSED_ERROR": "Popup closed error"
   },
   "HOTEL": {
+    "NO_REGISTER_HOTEL": "There is no registered hotel",
+    "REGISTER_HOTEL": "Register Hotel",
     "SAVE_HOTEL": "Save Hotel",
     "EDIT_HOTEL":"Edit Hotel",
     "NAME_HOTEL": "Name Hotel",

@@ -56,6 +56,8 @@
     "POPUP_CLOSED_ERROR": "El popup se cerró"
   },
   "HOTEL": {
+    "NO_REGISTER_HOTEL": "No hay hoteles registrados",
+    "REGISTER_HOTEL": "Registra tu hotel",
     "SAVE_HOTEL": "Guardar Hotel",
     "EDIT_HOTEL": "Editar Hotel",
     "NAME_HOTEL": "Nombre del Hotel",
