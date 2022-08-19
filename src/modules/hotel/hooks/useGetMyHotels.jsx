@@ -1,4 +1,3 @@
-import React from "react";
 import { collection, getDocs } from "firebase/firestore/lite";
 import { FirebaseDB } from "../../../firebase/config";
 import { useDispatch, useSelector } from "react-redux";

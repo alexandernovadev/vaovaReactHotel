@@ -18,16 +18,17 @@ import Tooltip from "@mui/material/Tooltip";
 import LogoutIcon from "@mui/icons-material/Logout";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import BedroomParentIcon from "@mui/icons-material/BedroomParent";
-import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
+// import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { useLogOut } from "../../auth/hooks/useLogOut";
 import { useNavigate } from "react-router-dom";
 import { FlagTranslate } from "../../../UI/FlagTranslate";
+import PropTypes from "prop-types";
 
 const optionsMenu = [
   { title: "Crear Hotel", icon: <AddCircleIcon />, to: "/create" },
   { title: "Mis hoteles", icon: <BedroomParentIcon />, to: "/my-hotels" },
-  { title: "Todos los Hoteles", icon: <MapsHomeWorkIcon />, to: "/" },
+  // { title: "Todos los Hoteles", icon: <MapsHomeWorkIcon />, to: "/" },
   { title: "Mi perfil", icon: <AccountCircleIcon />, to: "/my-profile" },
 ];
 
@@ -140,4 +141,8 @@ export const SidebarDrawer = ({ title }) => {
       </Drawer>
     </>
   );
+};
+
+SidebarDrawer.propTypes = {
+  ititled: PropTypes.string,
 };

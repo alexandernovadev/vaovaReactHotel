@@ -1,7 +1,7 @@
 import { doc, getDoc } from "firebase/firestore/lite";
 import { useDispatch, useSelector } from "react-redux";
 import { FirebaseDB } from "../../../firebase/config";
-import { setHotelActive, setLoad } from "../../../store/hotels/HotelSlice";
+import { setHotelActive } from "../../../store/hotels/HotelSlice";
 import { FormatToForm } from "../helpers/FormatHotelsJson";
 
 export const useGetHotelById = () => {

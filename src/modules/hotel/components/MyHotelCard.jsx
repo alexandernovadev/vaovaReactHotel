@@ -5,6 +5,7 @@ import PublicIcon from "@mui/icons-material/Public";
 import FlagCircleIcon from "@mui/icons-material/FlagCircle";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import { CardMyHotel } from "../styles/components/CardMyHotel";
+import PropTypes from 'prop-types'
 
 export const MyHotelCard = ({
   name,
@@ -76,4 +77,18 @@ export const MyHotelCard = ({
       </section>
     </CardMyHotel>
   );
+};
+
+MyHotelCard.propTypes = {
+  name: PropTypes.string,
+  id: PropTypes.string,
+  images: PropTypes.array,
+  description: PropTypes.string,
+  municipality: PropTypes.string,
+  department: PropTypes.string,
+  country: PropTypes.string,
+  score: PropTypes.string,
+  single_room: PropTypes.number,
+  two_twin_bedroom: PropTypes.number,
+  one_queen_bedroom: PropTypes.number,
 };

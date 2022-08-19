@@ -1,4 +1,4 @@
-import { collection, deleteDoc, doc, setDoc } from "firebase/firestore/lite";
+import { collection,  doc, setDoc } from "firebase/firestore/lite";
 import { useDispatch, useSelector } from "react-redux";
 import { FirebaseDB } from "../../../firebase/config";
 import { setSaving } from "../../../store/hotels/HotelSlice";

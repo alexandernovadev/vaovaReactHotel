@@ -24,6 +24,7 @@ import { useSaveHotel } from "../hooks/useSaveHotel";
 import { useTranslation } from "react-i18next";
 import { useFormik } from "formik";
 import { useEditHotel } from "../hooks/useEditHotel";
+import PropTypes from "prop-types";
 
 import * as yup from "yup";
 import { voavaTheme } from "../../../theme";
@@ -508,4 +509,9 @@ export const FormHotel = ({ initialValues, id = null }) => {
       </form>
     </>
   );
+};
+
+FormHotel.propTypes = {
+  initialValues: PropTypes.object.isRequired,
+  id: PropTypes.string,
 };

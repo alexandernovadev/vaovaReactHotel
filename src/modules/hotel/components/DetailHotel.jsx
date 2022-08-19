@@ -19,7 +19,7 @@ export const DetailHotel = ({ hotel, id }) => {
   const navigate = useNavigate();
 
   const handleDelele = async () => {
-    // ToDO Delete image from cloudinary
+    // ToDO Delete image from cloudinary no time :.
     try {
       await deleteHotel(id);
       navigate("/my-hotels");
